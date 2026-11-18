@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="1000" viewBox="0 0 1000 1000" fill="none">
+  <defs>
+    <linearGradient id="gold" x1="210" y1="180" x2="790" y2="820" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FFF1B8"/>
+      <stop offset=".42" stop-color="#E7B85C"/>
+      <stop offset="1" stop-color="#A96528"/>
+    </linearGradient>
+    <linearGradient id="blue" x1="300" y1="210" x2="720" y2="780" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#D9F8FF"/>
+      <stop offset=".5" stop-color="#65C9F0"/>
+      <stop offset="1" stop-color="#5474C8"/>
+    </linearGradient>
+    <radialGradient id="core" cx="0" cy="0" r="1" gradientTransform="translate(500 470) rotate(90) scale(250)" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#243D75"/>
+      <stop offset="1" stop-color="#090D20"/>
+    </radialGradient>
+    <filter id="glow" x="100" y="100" width="800" height="800" filterUnits="userSpaceOnUse">
+      <feGaussianBlur stdDeviation="12" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+  <!-- Outer orbital paths -->
+  <g filter="url(#glow)" stroke-linecap="round">
+    <ellipse cx="500" cy="470" rx="330" ry="145" transform="rotate(-32 500 470)" stroke="url(#gold)" stroke-width="13"/>
+    <ellipse cx="500" cy="470" rx="330" ry="145" transform="rotate(48 500 470)" stroke="url(#blue)" stroke-width="9" opacity=".95"/>
+    <path d="M211 650C280 760 420 823 555 800" stroke="url(#gold)" stroke-width="8" opacity=".8"/>
+  </g>
+  <!-- Central celestial body -->
+  <circle cx="500" cy="470" r="184" fill="url(#core)" stroke="url(#gold)" stroke-width="10"/>
+  <circle cx="500" cy="470" r="164" stroke="#A9DDF4" stroke-opacity=".35" stroke-width="2"/>
+  <path d="M365 493C414 435 463 410 526 412C578 414 624 443 651 481" stroke="#78D7F4" stroke-width="7" stroke-linecap="round" opacity=".65"/>
+  <path d="M385 545C432 580 493 594 554 576C594 565 623 541 644 510" stroke="#E6B85D" stroke-width="6" stroke-linecap="round" opacity=".7"/>
+  <!-- Stylized star / orbit nucleus -->
+  <path d="M500 337L528 433L625 470L528 499L500 596L472 499L375 470L472 433L500 337Z" fill="url(#gold)" opacity=".95"/>
+  <circle cx="500" cy="470" r="34" fill="#F7FBFF"/>
+  <circle cx="500" cy="470" r="17" fill="#70CFF2"/>
+  <!-- Orbital satellites -->
+  <circle cx="238" cy="598" r="22" fill="#F5D38B" stroke="#FFF4D2" stroke-width="5"/>
+  <circle cx="754" cy="313" r="18" fill="#8CE2F8" stroke="#E5FBFF" stroke-width="5"/>
+  <circle cx="681" cy="735" r="13" fill="#E7B85C"/>
+  <!-- Small stars -->
+  <g fill="#F4E7C3">
+    <path d="M260 280l8 24 24 8-24 8-8 24-8-24-24-8 24-8 8-24Z"/>
+    <path d="M748 555l6 18 18 6-18 6-6 18-6-18-18-6 18-6 6-18Z"/>
+    <circle cx="330" cy="740" r="6"/><circle cx="700" cy="205" r="7"/><circle cx="820" cy="665" r="5"/>
+  </g>
+  <text x="500" y="910" text-anchor="middle" fill="#F4E7C3" font-family="Arial, Helvetica, sans-serif" font-size="76" font-weight="700" letter-spacing="22">EOA</text>
+  <path d="M310 940H690" stroke="url(#gold)" stroke-width="4" stroke-linecap="round" opacity=".8"/>
+</svg>
